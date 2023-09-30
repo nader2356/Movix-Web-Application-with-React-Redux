@@ -10,6 +10,7 @@ import Footer from "./components/footer/Footer";
 
 import PageNotFound from "./pages/404/PageNotFound";
 import Home from "./pages/home/home";
+import Explore from "./pages/explore/Explore";
 
 
 function App() {
@@ -60,6 +61,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<PageNotFound />} />
+                <Route path="/explore/:mediaType" element={<Explore />} />
             </Routes>
             <Footer />
         </BrowserRouter>
