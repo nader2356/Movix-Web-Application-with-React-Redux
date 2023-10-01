@@ -12,6 +12,8 @@ import PageNotFound from "./pages/404/PageNotFound";
 import Home from "./pages/home/home";
 import Explore from "./pages/explore/Explore";
 
+import SearchResult from "./pages/searchResult/SearchResult";
+
 
 function App() {
     const dispatch = useDispatch();
@@ -59,6 +61,8 @@ function App() {
         <BrowserRouter>
             <Header />
             <Routes>
+               
+                <Route path="/search/:query" element={<SearchResult  />} />
                 <Route path="/" element={<Home />} />
                 <Route path="*" element={<PageNotFound />} />
                 <Route path="/explore/:mediaType" element={<Explore />} />
